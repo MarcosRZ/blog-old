@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "slug": "pantera",
+    "name": "Pantera",
+    "genre": "Groove",
+    "year": 1981,
+    "albums" : [
+      {
+        "id": 7,
+        "title": "Vulgar Display of Power",
+        "year": 1992
+      },
+      {
+        "id": 8,
+        "title": "Far Beyond Driven",
+        "year": 1994
+      },
+      {
+        "id": 9,
+        "title": "The Great Southern Trendkill",
+        "year": 1996
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "stone-sour",
+    "name": "Stone Sour",
+    "genre": "heavy metal",
+    "year": 1992,
+    "albums" : [
+      {
+        "id": 4,
+        "title": "Stone Sour",
+        "year": 2002
+      },
+      {
+        "id": 5,
+        "title": "Come (what) ever made",
+        "year": 2006
+      },
+      {
+        "id": 6,
+        "title": "Hydrograd",
+        "year": 2017
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "black-label-society",
+    "name": "Black Label Society",
+    "genre": "Groove",
+    "year": 1998,
+    "albums" : [
+      {
+        "id": 1,
+        "title": "Sonic Brew",
+        "year": 1999
+      },
+      {
+        "id": 2,
+        "title": "Stronger than death",
+        "year": 2000
+      },
+      {
+        "id": 3,
+        "title": "1919 eternal",
+        "year": 2002
+      }
+    ]
+  }
+]

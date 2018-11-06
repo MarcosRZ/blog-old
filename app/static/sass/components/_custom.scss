@@ -1,0 +1,28 @@
+.link {
+	cursor: pointer;
+}
+
+.flex{
+	display:flex;
+	
+	@include breakpoint('<=small') {
+		flex-direction: column !important;
+	}
+	
+	.sb {
+		justify-content: space-between;
+	}
+
+	&.flex-column{
+		flex-direction: column !important;
+
+		p, li, div {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.right{
+	text-align: right;
+}
+

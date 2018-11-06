@@ -1,0 +1,15 @@
+.tech {
+
+  .logo {
+  
+    @include breakpoint('<=small') {
+      padding: 2px;
+    }
+
+    padding: 20px;
+
+    &.bright {
+      background-color: white;
+    }
+  }
+}

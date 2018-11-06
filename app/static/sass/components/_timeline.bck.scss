@@ -1,0 +1,148 @@
+/* Import */
+
+// $import url('https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i,900,900i|Saira+Extra+Condensed:100,200,300,400,500,600,700,800|Saira:100,200,300,400,500,600,700,800');
+
+/* Variables */
+
+$background: _palette(bg);
+
+$spacing: 50px;
+$radius: 4px;
+
+$date: 120px;
+$dotborder: 4px;
+$dot: 11px;
+$line: 4px;
+
+$font-title: 'Saira', sans-serif;
+$font-text: 'Chivo', sans-serif;
+
+/* Base */
+
+// body {
+//   background: $background;
+//   font-size: 16px;
+// }
+
+// p {
+//   font-weight: 300;
+// }
+
+// strong {
+//   font-weight: 600;
+// }
+
+// h1 {
+//  font-family: $font-title;
+//  letter-spacing: 1.5px;
+//  color: $color-light;  
+//  font-weight: 400;
+//  font-size: 2.4em;
+// }
+
+// #content {
+//   margin-top: $spacing;
+//   text-align: center;  
+// }
+
+/* Timeline */
+.timeline-container{
+  margin-left:100px;
+}
+.timeline {
+  border-left: $line solid _palette(timeline-detail-color-a);
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;    
+  background: transparentize(_palette(timeline-color-light), .9);
+  // color: fade(white, 80%);
+  font-family: _font(family);  
+  margin: $spacing auto;  
+  letter-spacing: 0.5px;   
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;   
+  padding: $spacing;   
+  list-style: none;
+  text-align: left;  
+  font-weight: 100;  
+  // max-width: 30%; 
+  
+  h1 {
+   font-family: $font-title;
+   letter-spacing: 1.5px;
+   font-weight: 100;
+   font-size: 1.4em;    
+  }
+  
+  h2, h3 {
+   font-family: $font-title;
+   letter-spacing: 1.5px;
+   font-weight: 400;
+   font-size: 1.4em;
+  }
+  
+  .event {
+    border-bottom: 1px solid _palette(timeline-color-dark);
+    padding-bottom: ($spacing * 0.5);
+    margin-bottom: $spacing;  
+    position: relative;
+
+    &:last-of-type { 
+      padding-bottom: 0;
+      margin-bottom: 0; 
+      border: none;      
+    }
+
+    &:before, &:after {
+      position: absolute;
+      display: block;
+      top: 0;
+    }
+
+    // &:before {
+    //   left: ((($date * 0.6) + $spacing + $line + $dot + ($dotborder * 2)) * 1.5) * -1;    
+    //   color: _palette(timeline-color-dark);    
+    //   content: attr(data-date" "data-sub);
+    //   text-align: right;
+    //   font-weight: 100;    
+    //   font-size: 0.9em;
+    //   min-width: $date;
+    //   font-family: _font(family);
+    // }
+
+    &:after {
+      box-shadow: 0 0 0 $dotborder _palette(timeline-detail-color-a);    
+      left: ($spacing + $line + ($dot * 0.35)) * -1;        
+      background: lighten($background,5%);    
+      border-radius: 50%;  
+      height: $dot;
+      width: $dot;
+      content: "";
+      top: 5px;
+    }
+
+  }
+
+  .flex {
+		display: flex;
+    justify-content: space-between;
+    
+    p.location{
+      margin: 0;
+    }
+  }
+
+  h3 {
+    color: orange;
+    font-size: 1.2em;
+  }
+  h4 {
+    font-size: .9em;
+  }
+
+	.location {
+		font-weight: 200;
+		margin: 5px;
+		color: #ccc;
+	}
+}

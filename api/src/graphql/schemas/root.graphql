@@ -1,0 +1,23 @@
+scalar Date
+scalar ObjectID
+
+type RootQuery {
+  post(id: ID): Post
+  posts (skip: Int, limit: Int): [Post]
+  hosts (skip: Int, limit: Int): [Host]
+}
+
+type RootMutation {
+  createPost(post: PostDataModel): CreatePostResult
+  updatePost(post: PostDataModel): UpdatePostResult
+  deletePost(_id: String!): DeletePostResult
+
+  createHost(host: HostDataModel): CreateHostResult
+  updateHost(host: HostDataModel): UpdateHostResult
+  deleteHost(_id: String!): DeleteHostResult
+}
+
+schema {
+  query: RootQuery
+  mutation: RootMutation
+}

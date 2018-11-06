@@ -1,0 +1,36 @@
+type Post {
+   _id: ObjectID!
+  title: String
+  description: String
+  content: String
+  date: Date
+  deletionDate: Date
+} 
+
+input PostDataModel {
+   _id: ObjectID
+  title: String
+  description: String
+  content: String
+  date: Date
+  deletionDate: Date
+}
+
+type CreatePostResult {
+  OK: Boolean
+  error: String
+  payload: Post
+}
+
+type UpdatePostResult {
+  OK: Boolean
+  error: String
+  payload: Post
+}
+
+type DeletePostResult {
+  OK: Boolean
+  error: String
+  payload: [Post]
+}
+

@@ -1,0 +1,7 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "parser": "flow",
+  "arrowParens": "always",
+  "printWidth": 100
+}

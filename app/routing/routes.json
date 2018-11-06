@@ -1,0 +1,42 @@
+[
+  {
+    "key": "home",
+    "pattern": "/",
+    "target": "/Home",
+    "props": {
+      "title": "Home"
+    }
+  },
+  {
+    "key": "posts",
+    "pattern": "/posts",
+    "target": "/Posts",
+    "props": {
+      "title": "posts"
+    }
+  },
+  {
+    "key": "post",
+    "pattern": "/post/[id]",
+    "target": "/Post",
+    "props": {
+      "title": "post"
+    }
+  },
+  {
+    "key": "posts/create",
+    "pattern": "/posts/create",
+    "target": "/CreatePost",
+    "props": {
+      "title": "Create new Host"
+    }
+  },
+  {
+    "key": "test",
+    "pattern": "/test",
+    "target": "/Test",
+    "props": {
+      "title": "Test"
+    }
+  }
+]

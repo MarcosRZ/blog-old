@@ -1,0 +1,22 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "8.11"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-syntax-object-rest-spread",
+      {
+        "useBuiltIns": true
+      }
+    ],
+    "babel-plugin-inline-import",
+    "@babel/plugin-transform-exponentiation-operator"
+  ]
+}

@@ -1,0 +1,190 @@
+/* Import */
+
+// $import url('https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i,900,900i|Saira+Extra+Condensed:100,200,300,400,500,600,700,800|Saira:100,200,300,400,500,600,700,800');
+
+/* Variables */
+
+$radius: 4px;
+
+$date: 120px;
+$dotborder: 4px;
+$dot: 11px;
+$line: 4px;
+
+$border-thickness: 4px;
+$dot-size: 40px;
+$dot-border-radius: 50%;
+$timeline-event-spacing: 100px;
+
+$font-title: 'Saira', sans-serif;
+$font-text: 'Chivo', sans-serif;
+
+
+.timeline {
+
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+  font-family: _font(family);   
+  letter-spacing: 0.5px;   
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  list-style: none;
+  text-align: left;  
+  font-weight: 100;  
+  
+  @include breakpoint('<=small') {
+    padding: 0;
+  }
+  
+  h1 {
+   font-family: $font-title;
+   letter-spacing: 1.5px;
+   font-weight: 100;
+   font-size: 1.4em;    
+  }
+  
+  h2, h3 {
+   font-family: $font-title;
+   letter-spacing: 1.5px;
+   font-weight: 400;
+   font-size: 1.4em;
+  }
+
+  .timeline-event-container {
+
+    overflow: hidden;
+
+    @include breakpoint('<=small') {
+      padding-left: $dot-size / 2;
+      padding-left: 30px;
+    }
+
+    &.academic {
+      .dot {
+        background-color: _palette(timeline-detail-color-academic);
+        border: $border-thickness solid _palette(timeline-detail-color-academic);
+        box-shadow: 0px 0px 20px inset _palette(timeline-detail-color-academic);
+      }
+
+      .timeline-event-description {
+        border-left: $border-thickness solid _palette(timeline-detail-color-academic);
+
+        h3 {
+          color: _palette(timeline-detail-color-academic);
+        }
+      }
+
+
+    }
+
+    &.professional {
+
+      .timeline-event-description {
+        border-left: $border-thickness solid _palette(timeline-detail-color-professional);
+
+        h3 {
+          color: _palette(timeline-detail-color-professional);
+        }
+      }
+
+      &:first-of-type {
+
+        padding-top: 20px;
+  
+        .timeline-event-date {
+          padding-top: 0.2 * ($dot-size);
+        }
+  
+        .timeline-event-description {
+          padding-top: 0;
+  
+          .dot {
+            // background-color: _palette(timeline-detail-color-a);
+            box-shadow: 0px 0px 20px _palette(timeline-detail-color-b);
+          }
+        }
+      }
+
+      .dot {
+        background-color: _palette(timeline-detail-color-professional);
+        border: $border-thickness solid _palette(timeline-detail-color-professional);
+        box-shadow: 0px 0px 20px inset _palette(timeline-detail-color-professional);
+      }
+
+      .timeline-event-description {
+        border-left: $border-thickness solid _palette(timeline-detail-color-professional);
+      }
+    }
+  }
+
+  .timeline-event-date {
+    @include breakpoint('<=small') {
+      display:none;
+    }
+    float: left;
+    width: 20%;
+    padding-top: 0.2 * ($dot-size) + ($timeline-event-spacing / 2);
+  }
+
+  .timeline-event-description {
+    float: left;
+    width: 80%;
+    border-left: $border-thickness solid _palette(timeline-detail-color-a);
+    padding-left: $dot-size + $border-thickness;
+    padding-bottom: $timeline-event-spacing / 2;
+    padding-top: $timeline-event-spacing / 2;
+
+    .dot {
+      position: relative;
+      height: $dot-size;
+      width: $dot-size;
+      top: 0;
+      left: (-1 * ((($dot-size + ($border-thickness)) / 2))) - ($dot-size + $border-thickness);
+      border: $border-thickness solid _palette(timeline-detail-color-a);
+      background-color: _palette(timeline-event-background);
+      box-shadow: 0px 0px 20px inset _palette(timeline-detail-color-a);
+      border-radius: $dot-border-radius;
+      text-align: center;
+      color: #3e3e3e;
+      font-weight: 900;
+      line-height: 31px;
+    }
+
+    .event-description-item {
+      font-weight: 200;
+      color: #CCC;
+    }
+  }
+  
+  .event {
+
+    position: relative;
+
+    &:last-of-type { 
+      padding-bottom: 0;
+      margin-bottom: 0;  
+    }
+
+    &:before, &:after {
+      position: absolute;
+      display: block;
+      top: 0;
+    }
+
+  }
+
+  h3 {
+    font-size: 1.2em;
+    margin-top: -0.75 * ($dot-size);
+
+    @include breakpoint('<=small') {
+      margin-top: -1 * ($dot-size);
+    }
+  }
+  h4 {
+    font-size: .9em;
+  }
+  
+
+}

@@ -1,0 +1,15 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-react-jsx",
+    [
+      "@babel/plugin-syntax-object-rest-spread",
+      {
+        "useBuiltIns": true
+      }
+    ],
+    "babel-plugin-inline-import",
+    "@babel/plugin-transform-exponentiation-operator"
+  ]
+}

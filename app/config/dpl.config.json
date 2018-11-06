@@ -1,0 +1,27 @@
+{
+  "projects": [
+    {
+      "name": "pixel-sushi",
+      "root": "/root/apps/pixel-sushi",
+      "apps": [
+        {
+          "name": "app",
+          "target": "/app",
+          "postscripts": [
+            "npm i",
+            "npm run pm2:up"
+          ]        
+        },
+        {
+          "name": "api",
+          "target": "/api",
+          "postscripts": [
+            "npm i",
+            "npm run pm2:up"
+          ]        
+        }
+      ]
+    }
+  ]
+}
+

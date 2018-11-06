@@ -1,0 +1,57 @@
+///
+/// Solid State by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+.spaced {
+  margin-right: 10px;
+}
+
+.professional-entry {
+  margin: 15px  0px;
+  padding: 10px;
+  border-radius: 5px;
+	box-shadow: 0px 0px 10px #1d1d1d85;
+	
+	hr {
+		border-bottom-color: orange;
+		margin: 10px 0px;
+	}
+
+	.flex {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.title {
+		font-weight: 700;
+		font-size: 16px;
+		margin: 5px;
+		color: #FFF;
+		text-transform: uppercase;
+	}
+
+	.description {
+
+	}
+
+	.company {
+		font-weight: 500;
+		font-size: 16px;
+		margin: 5px;
+		color: #FFF;
+	}
+
+	.location {
+		font-weight: 200;
+		margin: 5px;
+		color: #ccc;
+	}
+
+	.time {
+		font-weight: 200;
+		margin: 5px;
+		color: #ccc;
+	}
+}

@@ -1,0 +1,39 @@
+type Host {
+  _id: ObjectID!
+  name: String
+  description: String
+  url: String
+  ip: String
+  creationDate: Date
+  deletionDate: Date
+  # projects: [Project]
+} 
+
+input HostDataModel {
+   _id: ObjectID
+  name: String
+  description: String
+  url: String
+  ip: String
+  creationDate: Date
+  deletionDate: Date
+}
+
+type CreateHostResult {
+  OK: Boolean
+  error: String
+  payload: Host
+}
+
+type UpdateHostResult {
+  OK: Boolean
+  error: String
+  payload: Host
+}
+
+type DeleteHostResult {
+  OK: Boolean
+  error: String
+  payload: [Host]
+}
+
