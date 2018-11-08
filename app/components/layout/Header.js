@@ -32,14 +32,11 @@ class Header extends React.PureComponent {
             {/* <Xlink href="/">
             <Nav.Link>Home</Nav.Link>
           </Xlink> */}
-            <Xlink href="/hosts">
-              <Nav.Link>Hosts</Nav.Link>
+            <Xlink href="/posts">
+              <Nav.Link>Posts</Nav.Link>
             </Xlink>
-            <Xlink href="/projects">
-              <Nav.Link>Projects</Nav.Link>
-            </Xlink>
-            <Xlink href="/apps">
-              <Nav.Link>Apps</Nav.Link>
+            <Xlink href="/Categories">
+              <Nav.Link>Categories</Nav.Link>
             </Xlink>
             <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

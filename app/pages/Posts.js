@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
-import { Table } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 import withMainLayout from '../HOC/withMainLayout';
 import postsQuery from '../queries/posts/list';
 import XLink from '../routing/Xlink';
@@ -52,6 +52,9 @@ class Hosts extends React.PureComponent {
             );
           }}
         </Query>
+        <XLink href="/posts/create">
+          <Button>New Post</Button>
+        </XLink>
       </div>
     );
   }

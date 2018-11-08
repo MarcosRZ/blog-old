@@ -15,6 +15,7 @@ class MainLayout extends PureComponent {
     super(props);
 
     this.client = new ApolloClient({
+      ssrMode: true,
       cache: new InMemoryCache(),
       link: createHttpLink({ uri: 'http://localhost:3001/api/graphql', fetch }),
     });

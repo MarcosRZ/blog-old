@@ -1,4 +1,4 @@
-export const APP_NAME = 'DPL';
+export const APP_NAME = 'BL0G';
 export const APP_NAME2 = '';
 export const APP_DESCRIPTION = 'Deploy API';
 export const APP_VERSION_MAJOR = '1';

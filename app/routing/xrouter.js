@@ -96,10 +96,11 @@ function processRoute(url) {
 }
 
 function getQuery(request) {
-
   let props = {};
 
-  if (request && request.url){ props = {...props, ...request.url.props }; }
+  if (request && request.url) {
+    props = { ...props, ...request.url.props };
+  }
 
   if (request && request.query && request.query.data) {
     const data = JSON.parse(request.query.data);
@@ -107,12 +108,13 @@ function getQuery(request) {
   }
 
   // Server Side Only
-  if (!process.browser && request && request.query){
-    props = {...props, ...request.query };
+  if (!process.browser && request && request.query) {
+    props = { ...props, ...request.query };
   }
 
-  return props;
+  console.log('GetInitialProps: ', props);
 
+  return props;
 }
 
 export default {
