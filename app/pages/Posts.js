@@ -3,16 +3,19 @@ import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { Table, Button } from 'react-bootstrap';
 import withMainLayout from '../HOC/withMainLayout';
+import withData from '../apollo/withData';
 import postsQuery from '../queries/posts/list';
 import XLink from '../routing/Xlink';
 
-class Hosts extends React.PureComponent {
+class Posts extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
   render() {
+    console.log(process.browser ? 'browser' : 'server');
+
     return (
       <div className="page-content">
         <h1>Posts</h1>
@@ -60,10 +63,10 @@ class Hosts extends React.PureComponent {
   }
 }
 
-Hosts.propTypes = {
+Posts.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-Hosts.defaultProps = {};
+Posts.defaultProps = {};
 
-export default withMainLayout(Hosts);
+export default withData(withMainLayout(Posts));
