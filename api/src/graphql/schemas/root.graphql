@@ -9,6 +9,7 @@ type RootQuery {
 
 type RootMutation {
   createPost(post: PostDataModel): CreatePostResult
+  createPost2(post: PostDataModel): Post
   updatePost(post: PostDataModel): UpdatePostResult
   deletePost(_id: String!): DeletePostResult
 

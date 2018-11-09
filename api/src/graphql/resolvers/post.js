@@ -46,6 +46,23 @@ export default {
 
       return success(payload);
     },
+    createPost2: async (obj, args) => {
+      const { post } = args;
+
+      console.log(post);
+
+      if (!post) throw new Error("There's no post to create");
+
+      if (!post.date) post.date = new Date();
+
+      const dbPost = new Post(post);
+
+      const payload = await dbPost.save();
+
+      return payload;
+
+      // return success(payload);
+    },
     updatePost: async (obj, args) => {
       const { post } = args;
 

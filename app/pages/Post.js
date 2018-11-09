@@ -11,8 +11,6 @@ class Post extends React.PureComponent {
   }
 
   render() {
-    console.log(this.props);
-
     const { id } = this.props;
 
     return (
@@ -21,8 +19,6 @@ class Post extends React.PureComponent {
           {({ loading, error, data }) => {
             if (loading) return <p>Loading...</p>;
             if (error) return <p>Error :(</p>;
-
-            console.log(data);
 
             const { post } = data;
 

@@ -112,8 +112,6 @@ function getQuery(request) {
     props = { ...props, ...request.query };
   }
 
-  console.log('GetInitialProps: ', props);
-
   return props;
 }
 

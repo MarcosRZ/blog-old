@@ -10,6 +10,7 @@
       }
     ],
     "babel-plugin-inline-import",
-    "@babel/plugin-transform-exponentiation-operator"
+    "@babel/plugin-transform-exponentiation-operator",
+    "@babel/plugin-transform-runtime"
   ]
 }

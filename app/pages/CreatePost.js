@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Mutation } from 'react-apollo';
 import { Form, Button } from 'react-bootstrap';
+import withData from '../apollo/withData';
 import withMainLayout from '../HOC/withMainLayout';
-import createPost from '../queries/posts/create';
+import createPostQuery from '../queries/posts/create';
+import postsQuery from '../queries/posts/list';
 import XLink from '../routing/Xlink';
 
 class CreatePost extends React.PureComponent {
@@ -31,7 +33,6 @@ class CreatePost extends React.PureComponent {
   }
 
   handleFormSubmit(addPost) {
-    console.log(this.state);
     addPost({ variables: { post: this.state } });
   }
 
@@ -40,7 +41,10 @@ class CreatePost extends React.PureComponent {
 
     return (
       <div className="post-creation-form">
-        <Mutation mutation={createPost}>
+        <Mutation
+          mutation={createPostQuery}
+          refetchQueries={[{ query: postsQuery }]}
+        >
           {(addPost, { data }) => (
             <div className="page-content">
               <h1>New Post</h1>
@@ -104,4 +108,4 @@ CreatePost.propTypes = {
 
 CreatePost.defaultProps = {};
 
-export default withMainLayout(CreatePost);
+export default withData(withMainLayout(CreatePost));
