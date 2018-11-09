@@ -1,5 +1,5 @@
 import { ApolloClient } from 'apollo-client';
-import { HttpLink, createHttpLink } from 'apollo-link-http';
+import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import fetch from 'isomorphic-unfetch';
 
@@ -23,7 +23,7 @@ function create(initialState) {
   });
 }
 
-export default function initApollo(initialState) {
+function initApollo(initialState) {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
   if (!process.browser) {
@@ -37,3 +37,5 @@ export default function initApollo(initialState) {
 
   return apolloClient;
 }
+
+export default initApollo;

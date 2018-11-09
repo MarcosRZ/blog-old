@@ -31,7 +31,6 @@ class Hosts extends React.PureComponent {
   }
 
   handleFormSubmit(addHost) {
-    console.log(this.state);
     addHost({ variables: { host: this.state } });
   }
 

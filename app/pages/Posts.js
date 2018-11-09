@@ -14,8 +14,6 @@ class Posts extends React.PureComponent {
   }
 
   render() {
-    console.log(process.browser ? 'browser' : 'server');
-
     return (
       <div className="page-content">
         <h1>Posts</h1>
